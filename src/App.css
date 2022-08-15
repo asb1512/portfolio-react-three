@@ -11,11 +11,6 @@
   grid-template-rows: 1fr;
 }
 
-.blur-cover {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(3px);
-}
-
 .canvas-cntr {
   position: absolute;
   top: 0;
@@ -61,5 +56,18 @@
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title-cntr > h1 {
+    font-size: 12vw;
+    line-height: 12vw;
+  }
+
+  .title-cntr > h3 {
+    margin: 3vh 0 0 0;
+    padding-top: 2.5vh;
+    font-size: 6vw;
   }
 }
