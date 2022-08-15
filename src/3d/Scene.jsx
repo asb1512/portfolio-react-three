@@ -41,12 +41,12 @@ export default function Scene(props) {
           <Noise opacity={0.7} />
           <Grid scale={scale} />
           <Glitch
-            delay={[1.5, 3.5]} // min and max glitch delay
-            duration={[0.2, 0.6]} // min and max glitch duration
-            strength={[0.3, 0.4]} // min and max glitch strength
-            // mode={GlitchMode.SPORADIC} // glitch mode
+            delay={[3.5, 7]} // min and max glitch delay
+            duration={[0.2, 0.7]} // min and max glitch duration
+            strength={[0.3, 0.7]} // min and max glitch strength
+            mode={GlitchMode.SPORADIC}
             active // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)
-            ratio={0.95} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
+            ratio={0.8} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
           />
         </EffectComposer>
       </Canvas>
