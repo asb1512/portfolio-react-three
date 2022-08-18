@@ -2,16 +2,18 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 
-export default function Model(props) {
+export default function Model({ page }) {
   const { nodes, materials } = useGLTF('/ridges_valleys.gltf');
   const meshRef = useRef();
 
   useFrame(({ clock }) => {
-    meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.1;
+    if (page === 'home') {
+      meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.1;
+    }
   });
 
   return (
-    <group ref={meshRef} {...props} dispose={null} position={[0, -1.5, 0]}>
+    <group ref={meshRef} dispose={null} position={[0, -1.5, 0]}>
       <mesh
         castShadow
         receiveShadow
