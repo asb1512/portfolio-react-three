@@ -1,6 +1,5 @@
 import React from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { Canvas, useFrame } from '@react-three/fiber';
 import {
   EffectComposer,
   Noise,
@@ -10,9 +9,10 @@ import {
 } from '@react-three/postprocessing';
 import { GlitchMode } from 'postprocessing';
 import Mountains from './Mountains';
+import AboutMarker from './AboutMarker';
 import './Scene.css';
 
-export default function Scene(props) {
+export default function Scene({ page }) {
   const scale = {
     min: 0.1,
     max: 4,
@@ -34,8 +34,8 @@ export default function Scene(props) {
         <pointLight
           position={[60, 50, -10]}
         />
-        <Mountains />
-        <OrbitControls />
+        <Mountains page={page} />
+        <AboutMarker page={page} />
         <EffectComposer>
           <Pixelation granularity={2} />
           <Noise opacity={0.7} />
