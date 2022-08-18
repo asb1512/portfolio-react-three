@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Scene from './3d/Scene';
 import Nav from './Nav';
 import Title from './Title';
+import About from './About';
 import './App.css';
 
 function App() {
@@ -10,9 +11,14 @@ function App() {
   return (
     <div className="App">
       <Nav page={page} setPage={setPage} />
-      <Title />
+      <Title page={page} />
+      {
+        page === 'about'
+          ? <About />
+          : null
+      }
       <div className="blur-cover" />
-      <Scene />
+      <Scene page={page} />
     </div>
   );
 }
