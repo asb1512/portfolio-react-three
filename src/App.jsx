@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Scene from './3d/Scene';
 import Nav from './Nav';
-import Title from './Title';
-import About from './About';
+import Pages from './Pages';
 import './App.css';
 
 function App() {
-  const [page, setPage] = useState('home');
+  const location = useLocation();
 
   return (
     <div className="App">
-      <Nav page={page} setPage={setPage} />
-      <Title page={page} />
-      {
-        page === 'about'
-          ? <About />
-          : null
-      }
-      <div className="blur-cover" />
-      <Scene page={page} />
+      <Nav pathname={location.pathname} />
+      <Pages pathname={location.pathname} />
+      <div className="blur-cover" pathname={location.pathname} />
+      <Scene pathname={location.pathname} />
     </div>
   );
 }
