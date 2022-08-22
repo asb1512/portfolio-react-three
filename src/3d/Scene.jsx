@@ -9,10 +9,11 @@ import {
 } from '@react-three/postprocessing';
 import { GlitchMode } from 'postprocessing';
 import Mountains from './Mountains';
+import HomeMarker from './HomeMarker';
 import AboutMarker from './AboutMarker';
 import './Scene.css';
 
-export default function Scene({ page }) {
+export default function Scene({ pathname }) {
   const scale = {
     min: 0.1,
     max: 4,
@@ -34,8 +35,9 @@ export default function Scene({ page }) {
         <pointLight
           position={[60, 50, -10]}
         />
-        <Mountains page={page} />
-        <AboutMarker page={page} />
+        <Mountains pathname={pathname} />
+        <HomeMarker pathname={pathname} />
+        <AboutMarker pathname={pathname} />
         <EffectComposer>
           <Pixelation granularity={2} />
           <Noise opacity={0.7} />
