@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 
-export default function Model({ page }) {
+export default function Model({ pathname }) {
   const { nodes, materials } = useGLTF('/ridges_valleys.gltf');
   const meshRef = useRef();
 
   useFrame(({ clock }) => {
-    if (page === 'home') {
+    if (pathname === '/') {
       meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.1;
     }
   });
