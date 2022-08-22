@@ -1,40 +1,38 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav({
   page,
   setPage,
+  pathname
 }) {
-  console.log('page:', page);
-  useEffect(() => {
-
-  }, [page]);
 
   return (
     <nav>
-      <h2
-        className={page === 'home' ? 'selected' : ''}
-        onClick={() => setPage('home')}
+      <Link
+        to="/" 
+        className={pathname === '/' ? 'selected' : ''}
       >
         A|–|B
-      </h2>
-      <h2
-        className={page === 'about' ? 'selected': ''}
-        onClick={() => setPage('about')}
+      </Link>
+      <Link
+        to="/about"
+        className={pathname === '/about' ? 'selected': ''}
       >
         about
-      </h2>
-      <h2
-        className={page === 'work' ? 'selected': ''}
-        onClick={() => setPage('work')}
+      </Link>
+      <Link
+        to="/work"
+        className={pathname === '/work' ? 'selected': ''}
       >
         work
-      </h2>
-      <h2
-        className={page === 'contact' ? 'selected': ''}
-        onClick={() => setPage('contact')}
+      </Link>
+      <Link
+        to="/contact"
+        className={pathname === '/contact' ? 'selected': ''}
       >
         contact
-      </h2>
+      </Link>
     </nav>
   );
 }
