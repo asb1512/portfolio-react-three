@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-const str = 'Andrew Bourgeois';
+import React from 'react';
 
 export default function Title() {
   
