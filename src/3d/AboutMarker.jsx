@@ -7,6 +7,10 @@ export default function AboutMarker({ pathname }) {
   const vec = new THREE.Vector3();
 
   useFrame((state) => {
+    if (pathname === '/') {
+      state.camera.position.lerp(vec.set(-25, 10, 5), 0.15);
+      state.camera.updateProjectionMatrix();
+    }
     if (pathname === '/about') {
       state.camera.position.lerp(vec.set(0, 0.7, 0.45), 0.15);
       state.camera.updateProjectionMatrix();

@@ -9,7 +9,6 @@ import {
 } from '@react-three/postprocessing';
 import { GlitchMode } from 'postprocessing';
 import Mountains from './Mountains';
-import HomeMarker from './HomeMarker';
 import AboutMarker from './AboutMarker';
 import './Scene.css';
 
@@ -36,7 +35,6 @@ export default function Scene({ pathname }) {
           position={[60, 50, -10]}
         />
         <Mountains pathname={pathname} />
-        <HomeMarker pathname={pathname} />
         <AboutMarker pathname={pathname} />
         <EffectComposer>
           <Pixelation granularity={2} />
