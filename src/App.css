@@ -1,16 +1,39 @@
 .App {
+  position: relative;
   width: 100%;
   height: 100vh;
+  z-index: 0;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4.5% 95.5%;
 }
 
+.bottom-block {
+  position: absolute;
+  bottom: 2%;
+  right: 0;
+  width: 70%;
+  height: 2px;
+  z-index: 5;
+  background-color: white;
+}
+
+.second-block {
+  position: absolute;
+  bottom: 6%;
+  right: 0;
+  width: 50%;
+  height: 1px;
+  z-index: 5;
+  background-color: white;
+}
+
 nav {
   grid-column: 1/2;
   grid-row: 1/2;
   width: 40%;
+  z-index: 10;
   margin: 0 30%;
   display: flex;
   flex-flow: row nowrap;
@@ -24,7 +47,7 @@ nav > a {
   background: rgba(255, 255, 255, 0);
   font-size: 1.7rem;
   font-weight: 100;
-  color: white;
+  color: rgba(255, 255, 255, 0.35);
   transition: padding 750ms ease-in-out, background 500ms ease-in-out, color 500ms ease-in-out;
   cursor: pointer;
   text-decoration: none;
@@ -39,14 +62,14 @@ nav > a:hover {
 nav > a.selected {
   padding: 0.5rem 2rem;
   background: rgba(255, 255, 255, 0.35);
-  color: black;
+  color: white;
 }
 
 .canvas-cntr {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   height: 100%;
 }
@@ -57,9 +80,37 @@ nav > a.selected {
   justify-self: center;
   align-self: stretch;
   width: 65%;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+}
+
+/* content pages */
+.page-cntr {
+  margin: 3rem 0;
+  padding: 3rem;
+  border: 1px solid white;
+  box-shadow:
+    0 0 5.2px rgba(0, 0, 0, 0.155),
+    0 0 12.5px rgba(0, 0, 0, 0.222),
+    0 0 23.5px rgba(0, 0, 0, 0.275),
+    0 0 42px rgba(0, 0, 0, 0.328),
+    0 0 78.5px rgba(0, 0, 0, 0.395),
+    0 0 188px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(30px);
+}
+
+.page-cntr > h1 {
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed white;
+  font-size: 4rem;
+  line-height: 2.5rem;
+}
+
+.page-cntr > p {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
 }
 
 .title-cntr {
@@ -96,6 +147,12 @@ nav > a.selected {
   50% {
     opacity: 0;
   }
+}
+
+/* about screen */
+.about-img {
+  width: 16%;
+  margin: 2rem 42%;
 }
 
 @media only screen and (max-width: 768px) {
