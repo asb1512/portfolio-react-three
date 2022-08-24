@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Nav({
-  page,
-  setPage,
-  pathname
-}) {
+export default function Nav({ pathname }) {
 
   return (
     <nav>
