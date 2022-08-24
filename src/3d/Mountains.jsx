@@ -9,7 +9,7 @@ export default function Model({ pathname }) {
 
   useFrame(({ clock }) => {
     if (pathname === '/') {
-      meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.1;
+      meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.06;
     }
   });
 
