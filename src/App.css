@@ -38,6 +38,7 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* nav option */
@@ -104,12 +105,12 @@ nav > a.selected {
 .page-cntr > h1 {
   padding-bottom: 2rem;
   border-bottom: 1px dashed white;
-  font-size: 4rem;
+  font-size: clamp(48px, 5vw, 72px);
   line-height: 2.5rem;
 }
 
 .page-cntr > p {
-  font-size: 1.2rem;
+  font-size: clamp(12px, 3vw, 24px);
   line-height: 2.5rem;
 }
 
@@ -180,5 +181,17 @@ nav > a.selected {
     margin: 3vh 0 0 0;
     padding-top: 2.5vh;
     font-size: 6vw;
+  }
+
+  .content-cntr {
+    width: 80%;
+  }
+
+  .page-cntr > h1 {
+
+  }
+
+  .page-cntr > p {
+    font-size: clamp(1rem, 4vw, 2rem);
   }
 }
