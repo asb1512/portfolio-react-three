@@ -8,22 +8,31 @@ export default function Model({ pathname }) {
   const meshRef = useRef();
 
   useFrame(({ clock }) => {
-    if (pathname === '/') {
-      meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.06;
+    switch (pathname) {
+      case '/':
+        meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.06;
+      default:
+        break;
     }
-  });
+  }, [pathname]);
 
   // set mesh color based on current 'page'
   useEffect(() => {
     switch (pathname) {
       case '/':
-        setColor('#FFF');
+        setColor('#FFFFFF');
         break;
       case '/about':
         setColor('red');
         break;
+      case '/work':
+        setColor('yellow')
+        break;
+      case '/contact':
+        setColor('blue');
+        break;
       default: 
-        setColor('#FFF');
+        setColor('#FFFFFF');
         break;
     }
   }, [pathname]);
