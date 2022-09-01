@@ -101,6 +101,8 @@ nav > a.selected {
     0 0 188px rgba(0, 0, 0, 0.55);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .page-cntr > h1 {
@@ -188,11 +190,26 @@ nav > a.selected {
     width: 80%;
   }
 
-  .page-cntr > h1 {
+  .page-cntr {
+    height: 70%;
+    padding: 2vh;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
 
+  .page-cntr > h1 {
+    margin: 0;
+    padding-bottom: 2vh;
+    font-size: 4vh;
   }
 
   .page-cntr > p {
     font-size: clamp(1rem, 4vw, 2rem);
+    line-height: 8vw;
+  }
+
+  .about-img {
+    width: 44%;
+    margin: 2vw 28% 0 28%;
   }
 }
