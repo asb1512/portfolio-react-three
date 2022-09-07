@@ -10,7 +10,11 @@ export default function Model({ pathname }) {
   useFrame(({ clock }) => {
     switch (pathname) {
       case '/':
+        meshRef.current.rotation.x = 0;
         meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.06;
+        break;
+      case '/about':
+        meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.02;
         break;
       case '/work':
         meshRef.current.rotation.x = (clock.getElapsedTime()) * 0.15;
