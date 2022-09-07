@@ -9,7 +9,7 @@ import {
 } from '@react-three/postprocessing';
 import { GlitchMode } from 'postprocessing';
 import Mountains from './Mountains';
-import AboutMarker from './AboutMarker';
+import Marker from './Marker';
 import './Scene.css';
 
 export default function Scene({ pathname }) {
