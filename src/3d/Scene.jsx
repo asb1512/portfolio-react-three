@@ -35,7 +35,7 @@ export default function Scene({ pathname }) {
           position={[60, 50, -10]}
         />
         <Mountains pathname={pathname} />
-        <AboutMarker pathname={pathname} />
+        <Marker pathname={pathname} />
         <EffectComposer>
           <Pixelation granularity={2} />
           <Noise opacity={0.7} />
