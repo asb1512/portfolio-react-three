@@ -14,10 +14,12 @@ export default function Model({ pathname }) {
         meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.06;
         break;
       case '/about':
+        meshRef.current.rotation.x = 0;
         meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.02;
         break;
       case '/work':
-        meshRef.current.rotation.x = (clock.getElapsedTime()) * 0.15;
+        meshRef.current.rotation.x = 0.6;
+        meshRef.current.rotation.y = (clock.getElapsedTime()) * 0.15;
         break;
       default:
         break;
