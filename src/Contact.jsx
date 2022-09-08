@@ -2,6 +2,11 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <div className="page-cntr">
+      <h1>Contact</h1>
+      <div className="contact-opt-cntr">
+        
+      </div>
+    </div>
   );
 }
