@@ -10,9 +10,18 @@ export default function Pages() {
   const location = useLocation();
 
   const transitions = useTransition(location, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    from: {
+      opacity: 0,
+    },
+    enter: {
+      opacity: 1,
+    },
+    leave: {
+      opacity: 0,
+    },
+    config: {
+      duration: 750,
+    },
   });
 
   return transitions((attrs, item) => (
