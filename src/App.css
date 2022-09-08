@@ -107,6 +107,8 @@ nav > a.selected {
   ;
   overflow-x: hidden;
   overflow-y: auto;
+  display: grid;
+  grid-template: 1fr 4fr / 1fr;
 }
 
 .page-cntr > h1 {
@@ -197,8 +199,6 @@ nav > a.selected {
   .page-cntr {
     height: 70%;
     padding: 2vh;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
   }
 
   .page-cntr > h1 {
