@@ -118,9 +118,28 @@ nav > a.selected {
   line-height: 2.5rem;
 }
 
+.page-cntr > h2 {
+  border-bottom: 1px dashed white;
+  font-size: clamp(24px, 4vw, 48px);
+}
+
 .page-cntr > p {
   font-size: clamp(12px, 3vw, 24px);
-  line-height: 2.5rem;
+  line-height: 2rem;
+}
+
+.page-cntr > ul > li > span {
+  font-weight: 700;
+}
+
+.page-cntr > ul > li > a {
+  font-weight: 700;
+  color: white;
+  transition: letter-spacing 325ms ease-in-out;
+}
+
+.page-cntr > ul > li > a:hover {
+  letter-spacing: 1px;
 }
 
 .title-cntr {
