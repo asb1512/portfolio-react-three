@@ -4,7 +4,7 @@ import './Contact.css';
 export default function Contact() {
   return (
     <div className="page-cntr">
-      <h1>Contact</h1>
+      <h1>contact</h1>
       <div className="contact-content">
         <div className="contact-opt-cntr">
           <a href='https://github.com/asb1512' alt="Github - Andrew Bourgeois">
