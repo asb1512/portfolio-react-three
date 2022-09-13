@@ -3,24 +3,28 @@ import React from 'react';
 export default function Work() {
   return (
     <div className="page-cntr">
-      <h1>Work</h1>
-      <div className="work-content">
-        <div className="work-item">
-          CNCT
-        </div>
-        <div className="work-item">
-          Dynamic Pitch
-        </div>
-        <div className="work-item">
-          We The People Wine
-        </div>
-        <div className="work-item">
-          AdSize (Flatiron)
-        </div>
-        <div className="work-item">
-          ParkList (Flatiron)
-        </div>
-      </div>
+      <h1>work</h1>
+      <ul>
+        <li>
+          <a href="https://social-politics.netlify.app/">
+            <span>Socially Political</span> (Mobile App Site)
+          </a>
+        </li>
+        <li>
+          <span>Dynamic Pitch/CMS</span>
+        </li>
+        <li>
+          <a href="https://wethepeoplewine.netlify.app/">
+            <span>We The People Wine</span>
+          </a>
+        </li>
+        <li>
+          <span>AdSize</span> (Flatiron)
+        </li>
+        <li>
+          <span>ParkList</span> (Flatiron)
+        </li>
+      </ul>
     </div>
   );
 }
