@@ -12,14 +12,37 @@ export default function About() {
         functional and reliable.
       </p>
       <p>
-        I primarily use React.js to design the frontend and UI, along with RTK
-        query for communication with an Express.js backend and database. 
+        I believe form and function can coexist. Without one, art
+        wouldn't be possible and without the other, what's the point?
       </p>
-      <img
+      <h2>
+        my stack
+      </h2>
+      <ul>
+        <li>
+          <span>React.js</span> (UI)
+        </li>
+        <li>
+          <span>Redux</span> (State Management)
+        </li>
+        <li>
+          <span>RTK Query</span> (HTTP Client)
+        </li>
+        <li>
+          <span>Express.js</span> (Backend Server)
+        </li>
+        <li>
+          <span>Prisma.js</span> (ORM)
+        </li>
+        <li>
+          <span>PostgreSQL</span> (Relational DB)
+        </li>
+      </ul>
+      {/* <img
         src={napTime}
         alt="Andrew Bourgeois: Full-Stack Developer"
         className="about-img"
-      />
+      /> */}
     </div>
   );
 }
