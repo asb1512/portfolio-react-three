@@ -6,12 +6,14 @@ export default function Work() {
       <h1>work</h1>
       <ul>
         <li>
-          <a href="https://social-politics.netlify.app/">
-            <span>Socially Political</span> (Mobile App Site)
+          <a href="https://media-pitch-site.netlify.app/">
+            <span>Dynamic Pitch/CMS</span>
           </a>
         </li>
         <li>
-          <span>Dynamic Pitch/CMS</span>
+          <a href="https://social-politics.netlify.app/">
+            <span>Socially Political</span> (Mobile App Site)
+          </a>
         </li>
         <li>
           <a href="https://wethepeoplewine.netlify.app/">
