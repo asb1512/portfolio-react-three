@@ -11,6 +11,11 @@ export default function Work() {
           </a>
         </li>
         <li>
+          <a href="https://hexcaster.netlify.app/">
+            <span>HexCaster (Hex Color Training)</span>
+          </a>
+        </li>
+        <li>
           <a href="https://social-politics.netlify.app/">
             <span>Socially Political</span> (Mobile App Site)
           </a>
